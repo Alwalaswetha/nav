@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+nav{
+     width: 100%;
+    border: 1px solid;
+    padding: 10px;
+    
+}
+.container1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+.container3{
+    display: flex;
+   justify-content: center;
+    align-items: center;
+    gap:15px;
+}
+.para{
+    background-color: red;
+    padding:5px 30px;
+}
+.para1{
+    background-color: green;
+    padding:5px 30px;
+}
+.para2{
+    margin-left:30px ;
+    background-color: orange;
+    padding:5px 20px;
+    margin-left: 0;
+}
+.para3{
+    background-color: white;
+    color: black;
+    display: none;
+    border: 1px solid;
+    padding:5px 25px;
+}
+ #menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+} 
+
+
+
+
+@media screen and (min-width: 500px) and (max-width: 750px) {
+
+.para{
+    background-color: red;
+    border: 1px solid black;
+    padding: 5px 30px;
+}  
+.para3{
+    background-color:rgb(252, 242, 242);
+    border: 1px solid black;
+    padding: 5px 25px;
+    display: inline;
+
+ }
+ .para1{
+    background-color: green;
+    border: 1px solid black;
+    padding: 5px 20px;
+    display: none;
+    
+}
+.para2{
+    background-color:orange;
+    border: 1px solid black;
+    padding: 5px 20px;
+    display: none;
+}
+}
+
+
+
+
+/* Media query for small screens */
+@media screen and (max-width: 500px) {
+  .container3 {
+    display: none;
+    flex-direction: column;
+  }
+  .container2{
+    display: none;
+  }
+  .container1{
+    flex-direction: column;
+    
+  }
+  
+
+  /* Show icon */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Show menu when checkbox is checked */
+  #menu-toggle:checked ~ .container1 .container2{
+    display: flex;
+    flex-direction: column;
+    /* align-items: start; */
+  }
+  #menu-toggle:checked ~ .container1 .container3{
+    display: flex;
+    flex-direction: column;
+    /* align-items: start; */
+    margin-top: 10px;
+
+  }
+   #menu-toggle:checked ~ .container1 .container3 >p{
+    display: inline-flex;
+  }
+}
